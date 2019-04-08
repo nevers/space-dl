@@ -3,6 +3,9 @@ from keras.utils.vis_utils import plot_model
 from keras import backend as K
 import tensorflow as tf
 
+"""
+This script plots a given model in Keras format (h5) to an image and allows you to print the dimensions of a given layer.
+"""
 IMG_H, IMG_W = 406, 528
 TARGET_IMG_H, TARGET_IMG_W = 416, 544
 BATCH_SIZE = 5
