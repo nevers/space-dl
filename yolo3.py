@@ -17,6 +17,19 @@ from PIL import Image, ImageDraw
 from keras.models import load_model, Model, Input
 from keras import backend as K
 
+"""
+A convolutional neural network inspired by the YOLO algorithm to support spacecraft docking in space.
+It will automatically perform the following operations:
+1. download the dataset to ~/.datasets
+2. load the the pretrained model from yolov3.h5
+3. retrain the second half of the model whilst keeping the first half of the model parameters constant on your GPU.
+4. evaluate the model 2 times per epoch on your GPU
+5. write training and evalation metrics for tensorboard to .model/{train,eval}
+6. write positive and negative evaluation images, annotated with their predictions to .model/eval-img
+7. periodically save the model state to .model/model
+"""
+
+
 URL = "https://nexus.spaceapplications.com/repository/raw-km/infuse/infuse-dl-dataset-v0.0.7-rand-eval.tar.gz"
 DATA_DIR = os.path.expanduser("~/.datasets")
 LOG_DIR = ".model/run/"
