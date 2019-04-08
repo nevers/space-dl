@@ -12,6 +12,11 @@ import numpy as np
 
 from PIL import Image, ImageDraw
 
+"""
+Warning: this script is deprecated and is only included here for documentary purposes.
+The model is inefficient and the evaluation metrics are semantically wrong.
+"""
+
 URL = "https://nexus.spaceapplications.com/repository/raw-km/infuse/infuse-dl-dataset-v0.0.8.tar.gz"
 DATA_DIR = os.path.expanduser("~/.datasets")
 MODEL_DIR = ".model/run/"
