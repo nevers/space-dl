@@ -6,6 +6,15 @@ import csv
 import util
 import re
 
+"""
+This script:
+1. collates each picture in the evaluation data together with the model output, 
+   over all evaluation epochs into one montage. Every montage thus shows how 
+   the model predictions evolve over each training epoch.
+2. collates all pictures per evaluation epoch into a video. In other words, a video
+   is created per epcoch that shows the model predictions and behavior at that epoch
+   over the full evaluation dataset.
+"""
 DATA_DIR = os.path.expanduser("~/.datasets/infuse-dl-dataset-v0.0.7-rand-eval/")
 TARGET = ".model/run/eval-img"
 VIDEO_DIR = ".model/run/eval-video"
