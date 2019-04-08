@@ -13,7 +13,7 @@ This script:
    the model predictions evolve over each training epoch.
 2. collates all pictures per evaluation epoch into a video. In other words, a video
    is created per epcoch that shows the model predictions and behavior at that epoch
-   over the full evaluation dataset.
+   ov
 """
 DATA_DIR = os.path.expanduser("~/.datasets/infuse-dl-dataset-v0.0.7-rand-eval/")
 TARGET = ".model/run/eval-img"
