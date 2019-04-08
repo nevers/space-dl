@@ -1,7 +1,7 @@
 # space-dl
 A convolutional neural network inspired by the YOLO algorithm to support spacecraft docking in space.
 
-The working principles of this repo are detailed and discussed in this blog post: [TODO]
+The working principles and results are detailed and discussed in this blog post: [TODO]
 
 ## Quickstart
 
@@ -21,7 +21,7 @@ $ virtualenv .venv
 $ . .venv/bin/activate
 $ pip install -r requirements
 ```
-2. Simply run yolo3.py to start training. It will automatically perform the following operations:
+2. Simply run yolo3.py to start training and evaluation. It will automatically perform the following operations:
 * download the dataset to ~/.datasets
 * load the the pretrained model from yolov3.h5
 * retrain the second half of the model whilst keeping the first half of the model parameters constant on your GPU.
@@ -34,7 +34,7 @@ $ pip install -r requirements
 $ ./yolo3.py
 ```
 
-2. Run tensor board
+2. Run tensor board to monitor the training and evaluation process.
 ```
 $ tensorboard --host=0.0.0.0 --logdir=.model
 ```
